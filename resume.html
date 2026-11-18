@@ -17,6 +17,7 @@ File Name: template.html
 	<link href="https://fonts.googleapis.com/css2?family=DM+Serif+Display:ital@0;1&family=PT+Serif:ital,wght@0,400;0,700;1,400;1,700&family=Passions+Conflict&display=swap" rel="stylesheet">
 	<link rel="icon" type="image/png" sizes="32x32" href="/favicon-32x32.png">
 	<link rel="icon" type="image/png" sizes="16x16" href="/favicon-16x16.png">
+	<link rel="manifest" href="site.webmanifest">
 	<link rel="stylesheet" href="css/styles.css">
 </head>
 
@@ -24,7 +25,7 @@ File Name: template.html
 	<!-- Main heading container for the page -->
 	<header class="main-header">
 		<div class="header-content">
-			<img src="favicon-32x32.png" alt="Cahmetri Pryce Portfolio Logo" class="header-logo">
+			<img src="assets/images/favicon-32x32.png" alt="Cahmetri Pryce Portfolio Logo" class="header-logo">
 			<span class="header-title">Cahmetri Pryce Portfolio</span>
 		</div>
 		
@@ -48,13 +49,48 @@ File Name: template.html
 	
 	<!-- Main Content Container -->
 	<main>
-		<section>
-			<h2>Professional Resume</h2>
+		<section class="work-experience">
+			<h1 class="resume-header"> Resume</h1>
+
+			<h2 class="work-experience-title">Work Experience</h2>
+			
+			<p>Sales represntative for a retail company, responsible for assisting customers, processing transactions, and maintaining product displays.
+				<br>Provided excellent customer service, resulting in positive feedback and repeat business.
+				<br>Worked in a fast-paced environment, handling customer inquiries and resolving issues efficiently.
+				<br>Developed strong communication and negotiation skills, resulting in increased sales and customer satisfaction.
+				<br>Collaborated with team members to achieve sales targets and contribute to overall business growth.
+			</p>
+		</section>
+
+		<section class="education-grid">
+			<div class="school-logo-container">
+				<div class="school-header">
+					<h3><strong>Boyd H. Anderson High School</strong></h3>
+					<img src="assets/images/school-logo-1.jpg" alt="Boyd H. Anderson High School Logo" class="school-logo-1">
+				</div>
+				<p>Graduated in 2021 where I recieved my aviation <strong>Wayman Aviation academy Discovery Flight</strong> and my <strong>Davidson Initiative First Flight</strong> certificate.</p>
+			</div>
+			<div class="school-logo-container">
+				<div class="school-header">
+					<h3><strong>Broward College</strong></h3>
+					<img src="assets/images/school-logo-2.jpeg" alt="Broward College Logo" class="school-logo-2">
+				</div>
+				<p>Currently pursuing a degree in Computer Science at Broward College, with a focus on web development and software development.
+					<br>Completed coursework in programming languages, data structures, algorithms, and database management.
+				</p>
+			</div>
 		</section>
 	</main>
 	
 	<!-- Footer area -->
 	<footer>
+		<p>
+    		<a href="https://jigsaw.w3.org/css-validator/check/referer">
+        		<img style="border:0;width:88px;height:31px"
+            	src="https://jigsaw.w3.org/css-validator/images/vcss"
+            	alt="Valid CSS!" />
+    		</a>
+		</p>
 		<p>&copy; 2026 Cahmetri Pryce. All rights reserved.</p>
 	</footer>
 	

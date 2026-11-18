@@ -17,6 +17,7 @@ File Name: template.html
 	<link href="https://fonts.googleapis.com/css2?family=DM+Serif+Display:ital@0;1&family=PT+Serif:ital,wght@0,400;0,700;1,400;1,700&family=Passions+Conflict&display=swap" rel="stylesheet">
 	<link rel="icon" type="image/png" sizes="32x32" href="/favicon-32x32.png">
 	<link rel="icon" type="image/png" sizes="16x16" href="/favicon-16x16.png">
+	<link rel="manifest" href="site.webmanifest">
 	<link rel="stylesheet" href="css/styles.css">
 </head>
 
@@ -24,7 +25,7 @@ File Name: template.html
 	<!-- Main heading container for the page -->
 	<header class="main-header">
 		<div class="header-content">
-			<img src="favicon-32x32.png" alt="Cahmetri Pryce Portfolio Logo" class="header-logo">
+			<img src="assets/images/favicon-32x32.png" alt="Cahmetri Pryce Portfolio Logo" class="header-logo">
 			<span class="header-title">Cahmetri Pryce Portfolio</span>
 		</div>
 		
@@ -48,13 +49,62 @@ File Name: template.html
 	<!-- Main Content Container -->
 	<main>
 		<section>
-			<h2>Contact Me</h2>
-			<p>Feel free to reach out to me using the information below:</p>
+  			<h1>Contact Me</h1>
+			<img src="assets/images/profile.jpg" alt="Portrait of Cahmetri Pryce" class="portrait-image">
+			<div class="social-image"></div>
+			<div class="social-icons">
+				<a href="mailto:cahmetripryce@gmail.com" title="Email">
+					<img src="assets/images/gmail-icon.png" alt="Gmail">
+				</a>
+				<a href="https://www.indeed.com" target="_blank" title="Indeed">
+					<img src="assets/images/indeed-logo.png" alt="Indeed">
+				</a>
+				<a href="https://www.instagram.com/marvellous_metri?gwpx=dWEweWQ3azVubGs2" title="Instagram">
+					<img src="assets/images/Instagram-icon.png" alt="Instagram">
+				</a>
+			</div>
+			<p>Feel free to contact me using the for below or through my social media above.</p>
+  			<form action="#" method="post">
+
+    			<div>
+      				<label for="first-name">First Name:</label>
+      				<input type="text" id="first-name" name="first_name" required>
+    			</div>
+
+				<div>
+					<label for="last-name">Last Name</label>
+					<input type="text" id="last-name" name="last_name" required>
+				</div>
+
+    			<div>
+      				<label for="email">Email Address:</label>
+      				<input type="email" id="email" name="email" required>
+    			</div>
+
+    			<div>
+      				<label for="phone">Phone Number:</label>
+      				<input type="tel" id="phone" name="phone" pattern="[0-9]{3}-[0-9]{3}-[0-9]{4}" placeholder="123-456-7890" required>
+    			</div>
+
+    			<div>
+      				<label for="message">Message:</label>
+      				<textarea id="message" name="message" rows="5" required></textarea>
+    			</div>
+
+    			<button type="submit">Send Message</button>
+  			</form>
 		</section>
 	</main>
 
 	<!-- Footer area -->
 	<footer>
+		<p>
+    		<a href="https://jigsaw.w3.org/css-validator/check/referer">
+        		<img style="border:0;width:88px;height:31px"
+            	src="https://jigsaw.w3.org/css-validator/images/vcss"
+            	alt="Valid CSS!" />
+    		</a>
+		</p>
 		<p>&copy; 2026 Cahmetri Pryce. All rights reserved.</p>
 	</footer>
 	

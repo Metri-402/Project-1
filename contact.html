@@ -15,8 +15,8 @@ File Name: template.html
 	<link rel="preconnect" href="https://fonts.googleapis.com">
 	<link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
 	<link href="https://fonts.googleapis.com/css2?family=DM+Serif+Display:ital@0;1&family=PT+Serif:ital,wght@0,400;0,700;1,400;1,700&family=Passions+Conflict&display=swap" rel="stylesheet">
-	<link rel="icon" type="image/png" sizes="32x32" href="/favicon-32x32.png">
-	<link rel="icon" type="image/png" sizes="16x16" href="/favicon-16x16.png">
+	<link rel="icon" type="image/png" sizes="32x32" href="assets/images/favicon-32x32.png">
+	<link rel="icon" type="image/png" sizes="16x16" href="assets/images/favicon-16x16.png">
 	<link rel="manifest" href="site.webmanifest">
 	<link rel="stylesheet" href="css/styles.css">
 </head>
@@ -25,12 +25,21 @@ File Name: template.html
 	<!-- Main heading container for the page -->
 	<header class="main-header">
 		<div class="header-content">
-			<img src="assets/images/favicon-32x32.png" alt="Cahmetri Pryce Portfolio Logo" class="header-logo">
-			<span class="header-title">Cahmetri Pryce Portfolio</span>
+			<a href="index.html">
+				<img src="assets/images/logo.png" alt="Cahmetri Pryce Portfolio Logo" class="header-logo">
+				<span class="header-title"><strong>Cahmetri Pryce Portfolio</strong></span>
+			</a>
 		</div>
+
+		<!--Hamburger Menu Button-->
+		<button class="hamburger" id="hamburger-btn" aria-label="Toggle Navigation">
+			<span></span>
+			<span></span>
+			<span></span>
+		</button>
 		
 	
-		<nav class="navbar">
+		<nav class="navbar" id="navbar">
 			<ul>
 				<li><a href="index.html">Home Page</a></li>
 				<!-- About/ Professional bio -->
@@ -48,7 +57,7 @@ File Name: template.html
 	</header>
 	<!-- Main Content Container -->
 	<main>
-		<section>
+		<section class="contact-section">
   			<h1>Contact Me</h1>
 			<img src="assets/images/profile.jpg" alt="Portrait of Cahmetri Pryce" class="portrait-image">
 			<div class="social-image"></div>
@@ -63,8 +72,8 @@ File Name: template.html
 					<img src="assets/images/Instagram-icon.png" alt="Instagram">
 				</a>
 			</div>
-			<p>Feel free to contact me using the for below or through my social media above.</p>
-  			<form action="#" method="post">
+			<p>Feel free to contact me using the form below or through my social media above.</p>
+  			<form class="contact-form">
 
     			<div>
       				<label for="first-name">First Name:</label>
@@ -91,9 +100,17 @@ File Name: template.html
       				<textarea id="message" name="message" rows="5" required></textarea>
     			</div>
 
-    			<button type="submit">Send Message</button>
+				<div class="send">
+    				<button class=send-btn type="submit">Send Message</button>
+				</div>
   			</form>
 		</section>
+
+		<!--Navigation Button-->
+		<div class="bottom-nav">
+			<a href="resume.html" class="nav-btn">Resume</a>
+			<a href="index.html" class="nav-btn">Home</a>
+		</div>
 	</main>
 
 	<!-- Footer area -->
@@ -102,11 +119,11 @@ File Name: template.html
     		<a href="https://jigsaw.w3.org/css-validator/check/referer">
         		<img style="border:0;width:88px;height:31px"
             	src="https://jigsaw.w3.org/css-validator/images/vcss"
-            	alt="Valid CSS!" />
+            	alt="Valid CSS!">
     		</a>
 		</p>
 		<p>&copy; 2026 Cahmetri Pryce. All rights reserved.</p>
 	</footer>
-	
+	<script src="js/script.js"></script>
 </body>
 </html>

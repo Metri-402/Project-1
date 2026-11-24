@@ -27,28 +27,39 @@ header {
 	justify-content: space-between;
 	padding: 20px;
 	background-color: #20B2AA;
+  box-shadow: 3px 8px 5px #ffffff, -3px -8px 5px #ffffff;
 }
 
 .header-title {
 	font-family: 'Passions Conflict', cursive;
-	font-size: 40px;
+	font-size: 26px;
 	color: #000000;
-	margin-bottom: 0px;
-	margin-left: 10px; 
+	margin: 0;
 	text-align: center;
-	width: 100%;
+  white-space: nowrap;  /* Keeps title on one line */
+  flex: 1;
 }
 
 .header-content {
 	display: flex;
 	align-items: center;
-	flex: 1;
+  flex: 1;
+}
+
+.header-content a {
+  display: flex;
+  align-items: center;
+  width: 100%;
+  text-decoration: none;
+  cursor: pointer;
+  gap: 8px;
 }
 
 /* Style rules for header logo */
 .header-logo {
-	width: 50px;
-	height: 50px;
+	width: 45px;
+	height: 45px;
+  flex-shrink: 0;
 }
 
 /* Style rules for navigation bar */
@@ -77,23 +88,23 @@ header {
 	color: #ffffff; /* WCAG-compliant color contrast for accessibility */
 }
 
-.navbar li {
-	float: left; /* Float list items to the left for horizontal layout */
-}
-
-
 /* Style rules for hero section */
 .hero-section {
 	display: flex;
+  flex-direction: column; 
 	align-items: center;
-	gap: 25px;
+  text-align: center;
+	gap: 15px;
 	margin-bottom: 20px;
 }
 
 .profile-image {
-	width: 400px;
+	width: 80%;
+  max-width: 300px;
 	height: auto;
 	margin-top: 20px; /* Adjust the top margin to create space between the image and the header */
+  border-radius: 30%;
+  box-shadow: 3px 8px 5px #cceeff, -3px -8px 5px #cceeff;
 }
 
 .hero-text {
@@ -104,8 +115,11 @@ header {
 
 /* Style rules for table content */
 table {
-  width: 850px;
+  display: block;
+  width: 100%;
+  max-width: 850px;
   margin: 20px auto;
+  overflow-x: auto;
   border-collapse: collapse;
   background-color: #ffffff;
   font-family: 'PT Serif', sans-serif;
@@ -118,6 +132,7 @@ h1 {
   font-size: 80px;
   color: #000000;
   margin-bottom: 20px;
+  text-shadow: 3px 5px 8px #4682B4;
 }
 
 h2 {
@@ -128,6 +143,17 @@ h2 {
   margin-bottom: 20px;
 }
 
+/* Style rules for sub-titles on home page */
+.sub {
+  text-align: left;
+}
+
+.action {
+  font-size: 1.25em;
+  color: #4682B4;
+  font-weight: bold;
+  text-decoration: none;
+}
 .coming-soon {
   text-align: center;
   font-family: 'PT Serif', serif;
@@ -180,7 +206,7 @@ td:nth-of-type(3) {
 /* Style rules for job title */
 .job-title {
 	font-style: italic;
-  	font-size: 20px;
+  font-size: 20px;
 	text-align: center;
 }
 
@@ -190,42 +216,19 @@ td:nth-of-type(3) {
 	text-align: center;
 }
 
-/* Basic Reset */
-* {
-  box-sizing: border-box;
-  margin: 0;
-  padding: 0;
-}
-
 body {
-  font-family: Arial, sans-serif;
+  font-family: 'PT Serif', sans-serif;
   line-height: 1.5;
   color: #222;
 }
 
-/* Header Bar */
-.site-header {
-  display: flex;
-  align-items: center;
-  padding: 12px 16px;
-  border-bottom: 1px solid #ccc;
+/* Style rules for project section */
+.video-header {
+  text-align: left;
 }
 
-.header-left {
-  display: flex;
-  align-items: center;
-  gap: 10px;
-}
-
-.logo-box {
-  border: 1px solid #666;
-  padding: 8px;
-  font-size: 12px;
-}
-
-.site-title {
-  font-weight: bold;
-  font-size: 14px;
+.audio-header {
+  text-align: left;
 }
 
 /* Resume Content Area */
@@ -286,6 +289,36 @@ body {
   border-radius: 50%; 
 }
 
+.contact-section {
+  max-width: 450px;
+  margin: 20px auto;
+  padding: 20px;
+}
+
+.contact-section h2 {
+  font-family: 'Passions Coflict', cursive;
+}
+
+.contact-form {
+  display: flex;
+  flex-direction: column;
+  gap: 12px;
+  margin-top: 15px;
+}
+
+.send {
+  display: grid;
+  grid-template-columns: 1fr 1fr;
+  gap: 12px;
+  margin-top: 10px;
+}
+
+.send-btn {
+  font-family: 'PT Serif', sans-serif;
+  font-size: 16px;
+  background-color: #20B2AA;
+}
+
 /* Aligns the 3 icons in a neat horizontal row underneath */
 .social-icons {
   display: flex;
@@ -300,3 +333,262 @@ body {
   height: 32px;
   object-fit: contain;
 }
+
+/* Bottom Action Buttons */
+.bottom-nav {
+  display: flex;
+  justify-content: space-between;  /* Pushes first button left, sceond button right */
+  align-items: center;
+  width: 100%;
+  box-sizing: border-box;
+  padding: 12px 16px;
+  margin-top: 32px;
+  margin-bottom: 32px;
+}
+
+.nav-btn {
+  border: 1px solid #000000; /* width, style, color */
+  border-radius: 6px; /* Adds rounded corners */
+  padding: 6px 24px;
+  text-decoration: none;
+  color: #000000;
+  font-size: 14px;
+  transition: all 0.2s ease; /*Smooths the hover transition */
+}
+
+.nav-btn:hover {
+  background-color: #20B2AA; /* Changes background on hover */
+  color: #fff; /* Changes text to white on hover */
+  border-color: #000000;
+}
+
+/* Style rules for Certificate section */
+.certif {
+  display: flex;
+  gap: 110px; /* Space between each circle */
+  flex-wrap: wrap; /* Move image to the next line on smaller screens */
+  justify-content: center; /* center the row on the page */
+}
+
+.certif img {
+  width: 200px;
+  height: 200px;
+  border-radius: 50%; /*creates oval shape */
+  object-fit: cover; /* Prevents it from looking strtched or squished */
+  cursor: pointer;
+  transition: transform 0.2s;
+}
+
+.certif img:hover {
+  transform: scale(1.05);
+}
+
+/* Enlarged popup image */
+.popup-content {
+  max-width: 85%;
+  max-height: 85%;
+  border-radius: 8px;
+}
+
+/* Background overlay */
+.popup {
+  display: none;
+  position: fixed;
+  z-index: 1000;
+  left: 0;
+  top: 0;
+  width: 100%;
+  height: 100%;
+  background-color: #22222200;
+  backdrop-filter: blur(4px);
+  justify-content: center;
+  align-items: center;
+}
+
+/* Close buttom */
+.close {
+  position: absolute;
+  top: 20px;
+  right: 35px;
+  color: #20B2AA;
+  font-size: 40px;
+  font-weight: bold;
+  cursor: pointer;
+}
+
+
+/* Style Rules for Hamburger Menu */
+.main-header {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  position: relative;
+  width: 100%;
+  box-sizing: border-box;
+  padding: 10px 15px;
+}
+
+.header-content a {
+  display: flex;
+  align-items: center;
+  gap: 0.75rem;
+}
+
+.hamburger {
+  display: flex;
+  flex-direction: column;
+  justify-content: space-between;
+  width: 30px;
+  height: 22px;
+  background: transparent;
+  border: none;
+  cursor: pointer;
+  padding: 0;
+}
+
+.hamburger span {
+  display: block;
+  width: 100%;
+  height: 3px;
+  background-color: #000000;
+  border-radius: 2px;
+}
+
+.main-header .navbar {
+  display: none;
+  position: absolute;
+  top: 100%;
+  right: 0;
+  width: 200px;
+  background-color: #20B2AA;
+  box-shadow: 0 4px 8px #00000033;
+  border-radius: 0 0 8px 8px;
+  z-index: 100;
+}
+
+.main-header .navbar.active {
+  display: block;
+}
+
+.main-header .navbar ul {
+  display: flex;
+  flex-direction: column;
+  list-style: none;
+  margin: 0;
+  padding: 0;
+}
+
+.main-header .navbar ul li {
+  border-bottom: 1px solid #FFFFFF33;
+}
+
+.main-header .navbar ul li:last-child {
+  border-bottom: none;
+}
+
+.main-header .navbar ul li a {
+  display: block;
+  padding: 12px 16px;
+  color: #000000;
+  text-decoration: none;
+  font-weight: bold;
+}
+
+.main-header .navbar ul li a:hover {
+  background-color: #FFFFFF40;
+}
+
+/* Media Query for Tablet Viewport */
+@media screen and (min-width: 550px) {
+  .hero-section {
+    display: flex;
+    flex-direction: row;
+    align-items: center;
+    gap: 1.5rem;
+  }
+
+  .profile-image {
+    width: 45%;
+    max-width: 400px;
+  }
+
+  .hero-text {
+    flex: 1;
+    text-align: center;
+  }
+
+  .skills-grid {
+    display: grid;
+    grid-template-columns: repeat(4, 1fr);
+    gap: 1rem;
+  }
+
+  .skills-grid img {
+    width: 100%;
+    height: auto;
+  }
+
+  .bottom-nav {
+    display: flex;
+    justify-content: space-between;
+    gap: 1rem;
+  }
+
+  .certif {
+    display: grid;
+    grid-template-columns: 1fr; /* Single column */
+    justify-items: center; /* Centers each circle horizontally */
+    gap: 1.5rem; /* Add even spacing between rows */
+  }
+
+
+}
+
+/* Media Query for Desktop Viewport */
+@media screen and (min-width: 900px) {
+  .hamburger {
+    display: none;
+  }
+
+  .main-header .navbar {
+    display: block;
+    position: static;
+    width: auto;
+    background-color: transparent;
+    box-shadow: none;
+  }
+
+  .main-header .navbar ul {
+    flex-direction: row;
+    gap: 1.5rem;
+    font-size: 0.9rem;
+  }
+
+  .main-header .navbar ul li {
+    border-bottom: none;
+  }
+
+  .main-header .navbar ul li a {
+    padding: 0;
+  }
+
+  .table {
+    display: table;
+    width: 850px;
+  }
+
+  .skills-grid {
+    display: grid;
+    grid-template-columns: repeat(2, 1fr);
+    gap: 20px; /* Space between rows and columns */
+    max-width: 500px;
+    margin: 0;
+  }
+
+  .skill-grid img {
+    width: 100%;
+    height: auto; /* Keeps the sqare ratio without stretching */
+    display: block;
+  }
+}
+
